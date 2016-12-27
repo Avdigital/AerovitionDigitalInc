@@ -415,7 +415,38 @@ this.productId = id;
 
         
 
-       
+  
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+      
+
+
+
+ 
+
+ 
+
+ 
+
+
+
+RELEASE NOTES:
+
+ 
+      
 public String setproductDetails(String details){
 
        
@@ -449,37 +480,6 @@ this.productDetails = details;
 
  
 
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-
-
-      
-
-
-
- 
-
- 
-
- 
-
-
-
-RELEASE NOTES:
-
- 
 
 
 
