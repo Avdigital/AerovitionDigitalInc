@@ -1,8 +1,1 @@
-import java.sql.*;import java.util.ArrayList;import java.lang.*;import java.lang.String;/** * A Java Program with embedded  
-SQL SELECT (JDBC query) 
-for n number of table and attributes. */
-class JavaQueryOx {
-java.lang.String servername = "127.0.0.1";//localjava.lang.String port = "8000"; //assume  a higher port for test.String a_jdbc_alas ="somestring value1";java.lang.String jdbc_alias_dir ="somestring value2";
-public static int i = 0;public static int  j = 0;private static ArrayList table;private static ArrayList attribute;
-public static int n = table.size(); //|| table of attribute.size();private static String[] table1_name_field1;private static String[] table2_name_field2;
-  public static void main (String[] args) {      try {                ArrayList<String>table = new ArrayList <String>();          ArrayList<String>attribute = new ArrayList <String>();                              String url = "jdbc:a_jdbc_alas://servername:port/jdbc_alias_dir/";            Connection conn = DriverManager.getConnection(url,"","");            Statement stmt = conn.createStatement();                    for(i = 0, j=0; i <= n; i++, j++)        {         ResultSet rs;      rs = stmt.executeQuery("SELECT table[i].attribute[i], table[j].attribute[j] FROM table[i],table[j]  WHERE table[i].attribute[i] = table[j].attribute.[j]");         while ( rs.next() ) {                         table1_name_field1 = (String[])(rs.getString((String[])(table[i].attribute[i]).toArray()));            table2_name_field2 = (String[])(rs.getString((String[])(table[j].attribute[j]).toArray()));                  System.out.println( "compare match" +  table1_name_field1 +  " " +  table2_name_field2 + "\n");              }         }       conn.close();     } catch (Exception e) {            System.err.println("Found Java  exception! ");            System.err.println(e.getMessage());     }    }}
+
