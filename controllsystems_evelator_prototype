@@ -1,0 +1,11 @@
+import givenapilib;
+public class Controller{
+public static int new_floor_location = "";public int position = 0;public int n;
+//cons.goeshere , default con goes here..public Controller(){};
+public Controller (int  objc_contr_s, int position, int n){  super();  this.new_floor_location = objc_contr_s;  this.posiiton = 0;  this.n= 0;)
+public Contrller objctrl = new Controller();
+    public String returnedDirection_fromcommand{//getDirection()                    //to move to th e2nd flooe || any number of floors        if(objctr.opneHere(position ) == 0 )//floor 1.           {           objctrl.move(); //justcurrent location at floor 0           }        else          {            new_floor_location =  objctrl.move()* n; //return integer  2 will supposed 8*.01 etcc..
+    }        new_floor_location = objctrl.setDirection(direction.up)//overloaded exclusing down param     return new_floor_location;//going up}
+public static void main(String[] args){
+    Controller controller = new controller();    public  String result = controller.returnDirection_fromcommand();//return object with attribute of defined controller            system.out.println("object with status" + result);
+}
