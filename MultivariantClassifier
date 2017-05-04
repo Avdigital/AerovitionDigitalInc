@@ -1,0 +1,128 @@
+/*
+ Aerovition Digital Inc.
+ All Rights Reserved.
+ Author: Shaw Rahman
+ 4/12/2017
+
+ Database Driver.
+ A Java Program with embedded
+ SQL SELECT (JDBC query)
+ for n number of table and
+ attributes.
+ **/
+
+ import java.sql.*;
+ import java.util.ArrayList;
+ import java.lang.String;
+
+class JavaQueryOx {
+
+/*
+ java.lang.String servername = "127.0.0.1";//local
+ java.lang.String port = "8000"; //assume a higher port for test.
+ String a_jdbc_alas ="somestring value1";
+ java.lang.String jdbc_alias_dir ="somestring value2";
+ */
+ public static int i = 0;
+ public static ArrayList table;
+ public static ArrayList attribute;
+ public static int n = table.size();
+
+public class Attribute{ //atomic attribute-compound feature ,:length, name etc...
+public String []attribute_n = {};
+
+public Attribute(String[] attribute_n) {
+super();
+this.attribute_n = attribute_n;
+}
+
+public Attribute() {
+}
+public String[] getAttribute() {
+	return attribute_n;
+}
+public void setAttribute(String[] attribute_n) {
+	this.attribute_n = attribute_n;
+	
+}
+
+public String setAttribute(Attribute attribute) {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+　
+}
+
+public class Table{
+//public Object table_n = "";
+public String  []table_n = {};
+
+public Table(String table) {
+super();
+this.table_n = table;
+}
+public Table() {
+	// TODO Auto-generated constructor stub
+}
+public String[] getTable() {
+	return (String[]) table_n;
+}
+public void setTable(String table_n) {
+	this.table_n = table_n;
+}
+public   Attribute attribute;
+
+public Attribute getAttribute() {
+	return attribute;
+}
+public void setAttribute(Attribute attribute) {
+	this.attribute = attribute;
+}
+public String setTable(Table table) {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+　
+}
+
+public static void main (String[] args) {
+ try {//however class instantiate all including utter-class......
+ JavaQueryOx jq = new JavaQueryOx();
+ Attribute attribute = jq.new Attribute();
+ Table table = jq.new Table();
+       String url = "jdbc:a_jdbc_alas://servername:port/jdbc_alias_dir/";
+       Connection conn = DriverManager.getConnection(url,"","");
+       Statement stmt = conn.createStatement(); 
+       
+       for(i = 0; i <= n; i++)
+       {
+        ResultSet rs1 , rs2;
+        rs1 = stmt.executeQuery("CREATE TABLE" + table.setTable(table) + "{" + attribute.setAttribute(attribute) + " "+ attribute.getClass().getTypeName() + " " +  attribute.getClass().getTypeName().length()  + "};"); //test for create table wiht attribute name type and length.
+        rs2 = stmt.executeQuery("SELECT" + table.getTable() +"." + attribute.getAttribute() + "FROM" + table.getTable()); //test for one table.
+	       
+        while ( rs2.next()) {
+        	 
+        	 System.out.println(   table.getTable() +  " has these attribute Names: " +  attribute.getAttribute() + "\n");
+        	 String []t1= table.getTable();
+        	 String []a1= attribute.getAttribute();
+        	 
+        	 if (t1[i].valueOf(a1[i]).equals(t1[i+1].valueOf(a1[i])))  // comparison  of equality TEST for two tables. SEQUENTIALLY.
+        		 System.out.println(   table.getTable() +  " First table has Equal  attribute Value with next table attribute : " +  attribute.getAttribute() + ">>"+ t1[i].valueOf(a1[i]).equals(t1[i+1].valueOf(a1[i])) +"= OF WHERE CLAUSE, WHEN  2 TABLES ATTRIBUTES  ARE EQUAL \n");
+        	 }
+        conn.close();
+        }
+  }
+       
+  catch(Exception e) {
+        System.err.println("Found Java  exception! ");
+        System.err.println(e.getMessage());
+  }
+  finally{ 
+    ;
+ }
+}
+
+　
+}
